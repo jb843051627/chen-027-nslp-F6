@@ -25,6 +25,10 @@ fuce:
   nslp:
     # 名册每页几条（由区局写定；空着/非正/离谱按 10 认）
     ledger-page-size: 10
+    # 法定节假日与停办日（yyyy-MM-dd 逐个写）：安排单数提前几日时这些日子不算；空着=没有不计日
+    # closed-days:
+    #   - 2026-10-01
+    #   - 2026-10-02
 #tomcat config
 server :
   port : 8080

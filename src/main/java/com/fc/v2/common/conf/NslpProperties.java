@@ -24,12 +24,23 @@ public class NslpProperties {
     /** 名册每页几条（区局在配置里写定） */
     private Integer ledgerPageSize;
 
+    /** 法定节假日与停办日（yyyy-MM-dd 逐个写）：数提前几日时这些日子不算，只此一处来源 */
+    private java.util.List<String> closedDays;
+
     public Integer getLedgerPageSize() {
         return ledgerPageSize;
     }
 
     public void setLedgerPageSize(Integer ledgerPageSize) {
         this.ledgerPageSize = ledgerPageSize;
+    }
+
+    public java.util.List<String> getClosedDays() {
+        return closedDays;
+    }
+
+    public void setClosedDays(java.util.List<String> closedDays) {
+        this.closedDays = closedDays;
     }
 
     /** 唯一认法：空/非正/离谱按默认认，其余照写定的认 */
